@@ -1,0 +1,141 @@
+* {
+  --webkit-box-sizing: border-box;
+  --moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-bg-l: hsla(179, 62%, 43%, 0.772);
+  --cyan-bg-r: hsla(179, 62%, 43%, 0.445);
+  --brightyellow: hsl(71, 73%, 54%);
+  --lightgray: hsl(204, 43%, 93%);
+  --grayishblue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 94%);
+}
+body {
+  background-color: var(--lightgray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+.main {
+  width: 650px;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #00000020;
+}
+.up {
+  padding: 40px;
+}
+.up h2 {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.up h3 {
+  color: var(--brightyellow);
+  margin: 20px 0;
+}
+.up p {
+  color: var(--grayishblue);
+  line-height: 1.6;
+}
+.down {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    var(--cyan-bg-l) 50%,
+    var(--cyan-bg-r) 50%
+  );
+}
+.down > div {
+  flex-basis: calc(100% / 2);
+  padding: 40px;
+}
+.down h3 {
+  color: var(--white);
+}
+.left .p-1 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 15px 0;
+  color: var(--white);
+}
+.left .p-1 span {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--white);
+  margin-right: 10px;
+}
+.left .p-2 {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--white);
+  opacity: 0.7;
+}
+button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--brightyellow);
+  color: var(--white);
+  padding: 15px 0;
+  margin-top: 30px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 5px 10px 10px #00000027;
+}
+button:hover {
+  background-color: hsl(71deg 73% 54% / 70%);
+  transform: scale(1.05);
+}
+.right h3 {
+  margin-bottom: 20px;
+}
+.right p {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--lightgray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 30px 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .main {
+    width: 320px;
+    margin: 50px 0;
+  }
+  .down {
+    flex-direction: column;
+    background-image: linear-gradient(
+      to bottom,
+      var(--cyan-bg-l) 50%,
+      var(--cyan-bg-r) 50%
+    );
+  }
+  .down > div {
+    flex-basis: 100%;
+  }
+}
